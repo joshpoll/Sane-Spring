@@ -1,6 +1,6 @@
 [@react.component]
 let make = () => {
-  let (duration, changeDuration) = React.useState(() => 10.);
+  let (duration, changeDuration) = React.useState(() => 1.5);
   let (damping, changeDamping) = React.useState(() => 1.);
   let ((prevStage, stage), changeStages) = React.useState(() => (Ball.Before, Ball.Before));
 
@@ -17,9 +17,9 @@ let make = () => {
     <input
       type_="range"
       min="0"
-      max="10"
+      max="3"
       value={Js.Float.toString(duration)}
-      step=0.5
+      step=0.1
       onChange={key_event => {
         let newinput = key_event->ReactEvent.Form.target##value;
         changeDuration(_ => float_of_string(newinput));
