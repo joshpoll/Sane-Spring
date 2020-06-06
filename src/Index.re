@@ -40,3 +40,4 @@ let makeContainer = text => {
    ReactDOMRe.render(<ReasonUsingJSUsingReason />, makeContainer("Reason Using JS Using Reason")); */
 
 ReactDOMRe.render(<BallWithSettings />, makeContainer("Ball"));
+ReactDOMRe.render(<BallOvershootWithSettings />, makeContainer("BallOvershoot"));
